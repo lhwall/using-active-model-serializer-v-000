@@ -2,7 +2,7 @@
 <h1><div class="title"><%= @post.title %></div></h1>
 <a href="#" class="js-next" data-id="<%=@post.id%>">Next...</a>
 <h1 class="description"><%= @post.description %></h1>
-<p class="author"><%= @post.author.name %></p>
+
 
 <script type="text/javascript" charset="utf-8">
 $(function () {
@@ -12,7 +12,7 @@ $(function () {
     $.get("/posts/" + nextId + ".json", function(data) {
       $(".title").text(data[title]);
       $(".cescription").text(data["description"]);
-      $(".author").text(data["author"]["name"]);
+
       // re-set the id to current on the link
       $(".js-next").attr("data-id", data["id"]);
     });

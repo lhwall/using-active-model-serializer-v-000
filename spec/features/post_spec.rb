@@ -21,7 +21,7 @@ describe 'navigate' do
   end
 end
 
-# describe 'form' do
+describe 'form' do
 #   it 'shows a new form that submits content and redirects and prints out params' do
 #     visit new_post_path
 #
